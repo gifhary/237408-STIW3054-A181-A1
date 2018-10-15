@@ -54,7 +54,7 @@ public class HTML2Excel {
         }
     }
 
-    public static void writeToXLSFile() {
+    public static void writeToXLSXFile() {
 
         if (dataRecord.isEmpty()) {
             System.out.println("ERROR : No data to write, build terminated.");
@@ -91,6 +91,6 @@ public class HTML2Excel {
 
     public static void main(String[] args) {
         collectWebTableData();
-        writeToXLSFile();
+        writeToXLSXFile();
     }
 }
