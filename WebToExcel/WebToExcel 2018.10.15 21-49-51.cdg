@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="WebToExcel">
+  <ClassDiagramComponents>
+    <Class name="Format" package="com.mavenproject.webtoexcel" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="header" type="String" visibility="private"/>
+        <Field name="data" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="header"/>
+          <Argument type="String" name="data"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setHeader" returnType="void" visibility="public">
+          <Argument type="String" name="header"/>
+        </Method>
+        <Method name="getHeader" returnType="String" visibility="public"/>
+        <Method name="setData" returnType="void" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="getData" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HTML2Excel" package="com.mavenproject.webtoexcel" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="dataRecord" type="List&lt;Format&gt;" visibility="private" isStatic="true"/>
+        <Field name="URL" type="String" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="collectWebTableData" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="writeToXLSFile" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="dataRecord" source="com.mavenproject.webtoexcel.HTML2Excel" target="com.mavenproject.webtoexcel.Format" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Format&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
