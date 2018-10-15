@@ -58,7 +58,7 @@ public class HTML2Excel {
 
         if (dataRecord.isEmpty()) {
             System.out.println("ERROR : No data to write, build terminated.");
-            System.exit(0);
+            System.exit(0); //without this, the program will write empty excel file
         }
 
         String excelFile = "Output File.xlsx";
@@ -75,6 +75,8 @@ public class HTML2Excel {
                 cell1.setCellValue(dataRecord.get(i).getHeader());
                 XSSFCell cell2 = row.createCell(1);
                 cell2.setCellValue(dataRecord.get(i).getData());
+                //had to manually create first and second cell because there is two
+                //different HTML tags for each cell in a row on wikipedia table
             }
 
             FileOutputStream outputFile = new FileOutputStream(excelFile);
