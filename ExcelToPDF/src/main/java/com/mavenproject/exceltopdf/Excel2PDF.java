@@ -38,7 +38,6 @@ public class Excel2PDF {
             Iterator<Row> rowIterator = sheet.iterator();
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
-                Iterator<Cell> cellIterator = row.cellIterator();
 
                 Cell column1 = row.getCell(0);
                 Cell column2 = row.getCell(2);//if i put the value 1, it only contain four null data in the file
