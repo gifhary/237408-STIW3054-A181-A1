@@ -5,8 +5,6 @@
  */
 package com.mavenproject.exceltopdf;
 
-import org.apache.poi.ss.usermodel.Cell;
-
 /**
  *
  * @author Gifhary
