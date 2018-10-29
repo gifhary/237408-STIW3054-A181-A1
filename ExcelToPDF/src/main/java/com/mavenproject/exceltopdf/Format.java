@@ -49,7 +49,7 @@ public class Format {
     }
     
     public void setFideID(String fideID){
-        this.fieldID = fieldID;
+        this.fideID = fideID;
     }
     
     public String getFideID(){
