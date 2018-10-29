@@ -13,7 +13,7 @@ public class Format {
 
     private String number;
     private String name;
-    private String fieldID;
+    private String fideID;
     private String fed;
     private String rtg;
     private String clubCty;
@@ -22,10 +22,10 @@ public class Format {
 
     }
 
-    public Format(String number, String name, String fieldID, String fed, String rtg, String clubCty) {
+    public Format(String number, String name, String fideID, String fed, String rtg, String clubCty) {
         this.number = number;
         this.name = name;
-        this.fieldID = fieldID;
+        this.fideID = fideID;
         this.fed = fed;
         this.rtg = rtg;
         this.clubCty = clubCty;
@@ -48,12 +48,12 @@ public class Format {
         return name;
     }
     
-    public void setFideID(String fieldID){
+    public void setFideID(String fideID){
         this.fieldID = fieldID;
     }
     
     public String getFideID(){
-        return fieldID;
+        return fideID;
     }
     
     public void setFed (String fed){
